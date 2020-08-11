@@ -91,10 +91,9 @@ const game = (players_choice) => {
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
-
-
-
-
+// 1km = 0.62137119223mi
+// Ex: 5km * (0.62137119223mi / 1km) = (5 * 0.62137119223)-mi
+const km2mi = km => km * 0.62137119223;
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
 const ft2cm = ft => ft * 30.48;
