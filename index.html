@@ -7,20 +7,15 @@
 </head>
 <body>
 
+    <h5>Enter your choice {R, P, S} and press 'Play Game'-button!</h5>
+    <input id="Input-Value" type="text" placeholder="Enter R, P, or S here...">
+    <button onclick="getInput()">Play Game</button>
+
     <script>
-        const months2years = (months) => {
-            // 2-months * (year / 12-months) = (2/12)-years = (1/6)-year = 0.1667-years
-            return months / 12.0;
+        const getInput = () => {
+            const input_val = document.getElementById('Input-Value').value;
+            console.log(input_val);
         };
-
-
-
-        
-        // 2 - 4 months 10% of their body weight
-        console.log(`2-months = ${months2years(2)}`);
-        console.log(`4-months = ${months2years(4)}`);
-        // 4 - 7 months 5% of their body weight 
-        console.log(`7-months = ${months2years(7)}`);
     </script>
 
     <script src="index.js"></script>
