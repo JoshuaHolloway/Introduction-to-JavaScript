@@ -122,11 +122,20 @@ annoyingSong(starting_num_of_sodas);
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-const letter_grade = () => {};
-  
-
-  
-  
+const letter_grade = num_grade => {
+    if (90 <= num_grade) // [90, infinity)
+        return 'A';
+    else if (80 <= num_grade && num_grade < 90) // [80, 90)
+        return 'B';
+    else if (70 <= num_grade && num_grade < 80) // [70, 80)
+        return 'C';
+    else if (60 <= num_grade && num_grade < 70) // [60, 70)
+        return 'D';
+    else if (num_grade < 60) // (-infity, 60)
+        return 'F'
+};
+for (let num_grade = 5; num_grade < 120; num_grade+=10)
+    console.log(`${num_grade} receives a letter grade of ${letter_grade(num_grade)}`);
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
