@@ -82,7 +82,7 @@ console.log(`Ammount of food to eat is ${food_to_eat}-lbs of food!`);
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number
 const game = (players_choice) => {
-
+    
 };
 
   
