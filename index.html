@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors!</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
@@ -11,21 +12,7 @@
     <input id="Input-Value" type="text" placeholder="Enter R, P, or S here...">
     <button onclick="getInput()">Play Game</button>
 
-    <script>
-        const getInput = () => {
-            const input_val = document.getElementById('Input-Value').value;
-            console.log(input_val);
-        };
-
-        const possible_choices = ['R', 'P', 'S'];
-        // Math.random() randomly return a number between [0, 1)
-        const random_index = Math.floor(Math.random() * possible_choices.length);
-        const random_play = possible_choices[random_index];
-        
-        console.log('josh');
-        console.log(`Random-index=${random_index} and random-play=${random_play}`);
-    </script>
-
-    <script src="index.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/rock-paper-scissors.js"></script>
 </body>
 </html>

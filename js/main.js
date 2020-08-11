@@ -70,10 +70,6 @@ const weight = 15;
 const dog_age = 1;
 const food_to_eat = dog_feeder(weight, age);
 console.log(`Ammount of food to eat is ${food_to_eat}-lbs of food!`);
-  
-
-
-
 
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
@@ -81,13 +77,14 @@ console.log(`Ammount of food to eat is ${food_to_eat}-lbs of food!`);
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number
-const game = (players_choice) => {
-    
-};
 
+// SEE CODE IN /js/rock-paper-scissors.js
+// SEE CODE IN /js/rock-paper-scissors.js
+// SEE CODE IN /js/rock-paper-scissors.js
+// SEE CODE IN /js/rock-paper-scissors.js
+// SEE CODE IN /js/rock-paper-scissors.js
+// SEE CODE IN /js/rock-paper-scissors.js
   
-  
-
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
