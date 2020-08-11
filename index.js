@@ -107,8 +107,11 @@ const ft2cm = ft => ft * 30.48;
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
-
+const annoyingSong = num => {
+    for (let i = num; i > 0;/* decrement done in the body of the for loop */)
+        console.log(`There are ${i}-bottles of soda on the wall, ${i}-bottles of soda, take one down pass it around ${--i}-bottles of soda on the wall`);
+};
+console.log(annoyingSong(99));
 
 
 
