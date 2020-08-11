@@ -80,7 +80,10 @@ console.log(`Ammount of food to eat is ${food_to_eat}-lbs of food!`);
 // Your function should take a string (either rock paper or sissors)
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
-// hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
+// hint while you can complete this with only conditionals based on strings it may help to equate choice to a number
+const game = (players_choice) => {
+
+};
 
   
   
@@ -94,8 +97,10 @@ console.log(`Ammount of food to eat is ${food_to_eat}-lbs of food!`);
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
+const ft2cm = ft => ft * 30.48;
+// 1 foot = 30.480 Centimetres
+// Ex: 5ft * (30.480cm / 1ft) = (5 * 30.480)-ft
   
-
 
 
 
