@@ -7,6 +7,15 @@ if (age > votingAge)
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+// declare a variable
+let variable = 5;
+
+// use a conditional to change the value of that variable based on the value assigned to a second variable
+const second_variable = 4.999999;
+if (variable < second_variable)
+    variable = 1e3;
+
+console.log(`variable = ${variable}`);
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 const str2num = str => Number(str);
