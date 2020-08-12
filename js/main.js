@@ -8,19 +8,11 @@ if (age > votingAge)
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
 
-
-
-
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
 
-
-
-
 //Task d: Write a function to multiply a*b 
-
-
-
+const mult = (a, b) => a * b;
 
 
 /************************************************************** Task 2 **************************************************************/
@@ -97,9 +89,6 @@ const ft2cm = ft => ft * 30.48;
 // 1 foot = 30.480 Centimetres
 // Ex: 5ft * (30.480cm / 1ft) = (5 * 30.480)-ft
   
-
-
-
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
@@ -120,16 +109,11 @@ annoyingSong(starting_num_of_sodas);
 //60s should be D 
 //and anything below 60 should be F
 const letter_grade = num_grade => {
-    if (90 <= num_grade) // [90, infinity)
-        return 'A';
-    else if (80 <= num_grade && num_grade < 90) // [80, 90)
-        return 'B';
-    else if (70 <= num_grade && num_grade < 80) // [70, 80)
-        return 'C';
-    else if (60 <= num_grade && num_grade < 70) // [60, 70)
-        return 'D';
-    else if (num_grade < 60) // (-infity, 60)
-        return 'F'
+    if (90 <= num_grade) return 'A'; // [90, infinity)
+    else if (80 <= num_grade && num_grade < 90) return 'B'; // [80, 90)
+    else if (70 <= num_grade && num_grade < 80) return 'C'; // [70, 80)       
+    else if (60 <= num_grade && num_grade < 70) return 'D'; // [60, 70)
+    else if (num_grade < 60) return 'F'; // (-infity, 60)
 };
 for (let num_grade = 5; num_grade < 120; num_grade+=10)
     console.log(`${num_grade} receives a letter grade of ${letter_grade(num_grade)}`);
@@ -139,7 +123,7 @@ for (let num_grade = 5; num_grade < 120; num_grade+=10)
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
 const count_num_vowels = () => {
-
+    
 };
 
 /************************************************************** Stretch **************************************************************/

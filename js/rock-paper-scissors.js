@@ -76,7 +76,10 @@ const play_game = (player_choice) => {
     else if (ai_choice==='S' && player_choice==='R') { //  S,R -> P2
         choices_elem.innerHTML = 'Player chose Rock and AI chose Scissors';
         result_elem.innerHTML = 'You-win: Rock smashes scissors!';
-    } else {
+    } 
+    
+    // Other - player apparently entered an invalid choice
+    else {
         choices_elem.innerHTML = 'You entered an invalid choice!!!';
         result_elem.innerHTML = 'Please enter P, R, or S';
     }
