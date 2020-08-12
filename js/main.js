@@ -9,7 +9,10 @@ if (age > votingAge)
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
-
+const str2num = str => Number(str);
+const x = str2num('1999');
+console.log(x);
+console.log(typeof x);
 
 //Task d: Write a function to multiply a*b 
 const mult = (a, b) => a * b;
@@ -70,12 +73,12 @@ console.log(`Ammount of food to eat is ${food_to_eat}-lbs of food!`);
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number
 
-// SEE CODE IN /js/rock-paper-scissors.js
-// SEE CODE IN /js/rock-paper-scissors.js
-// SEE CODE IN /js/rock-paper-scissors.js
-// SEE CODE IN /js/rock-paper-scissors.js
-// SEE CODE IN /js/rock-paper-scissors.js
-// SEE CODE IN /js/rock-paper-scissors.js
+// ---- SEE CODE IN /js/rock-paper-scissors.js ----
+// ---- SEE CODE IN /js/rock-paper-scissors.js ----
+// ---- SEE CODE IN /js/rock-paper-scissors.js ----
+// ---- SEE CODE IN /js/rock-paper-scissors.js ----
+// ---- SEE CODE IN /js/rock-paper-scissors.js ----
+// ---- SEE CODE IN /js/rock-paper-scissors.js ----
   
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
@@ -122,9 +125,14 @@ for (let num_grade = 5; num_grade < 120; num_grade+=10)
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
-const count_num_vowels = () => {
-    
-};
+
+// ---- See regex.html ----
+// ---- See regex.html ----
+// ---- See regex.html ----
+// ---- See regex.html ----
+// ---- See regex.html ----
+// ---- See regex.html ----
+// ---- See regex.html ----
 
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
