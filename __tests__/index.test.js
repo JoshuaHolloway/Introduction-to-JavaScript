@@ -57,16 +57,17 @@ import functions from '../index';
 //     })
 // });
 
-describe('feetFunction', ()=>{
-    it('return cm / 30.48', ()=>{
-        expect(functions.feet(160)).toBe(5.2493438320209975);
-    })
-});
-// describe('annoyingSongFunction', ()=>{
-//     it('a string that counts down based on the number imputted', ()=>{
-//         expect(functions.annoyingSong(5)).toBe(`${5} bottles of soda on the wall, ${5} bottles of soda, take one down pass it around ${5 - 1} bottles of soda on the wall`);
+// describe('feetFunction', ()=>{
+//     it('return cm / 30.48', ()=>{
+//         expect(functions.feet(160)).toBe(5.2493438320209975);
 //     })
 // });
+
+describe('annoyingSongFunction', ()=>{
+    it('a string that counts down based on the number imputted', ()=>{
+        expect(functions.annoyingSong(5)).toBe(`${5} bottles of soda on the wall, ${5} bottles of soda, take one down pass it around ${5 - 1} bottles of soda on the wall`);
+    })
+});
 
 // describe('gradeFunction', ()=>{
 //     it('expect A', ()=>{

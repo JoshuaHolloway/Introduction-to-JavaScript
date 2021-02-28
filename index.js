@@ -161,7 +161,7 @@ const hungryDog = (weight, age) => {
 const weight = 15;
 const dog_age = 1;
 const food_to_eat = hungryDog(weight, dog_age);
-console.log(`Ammount of food to eat is ${food_to_eat}-lbs of food!`);
+// console.log(`Ammount of food to eat is ${food_to_eat}-lbs of food!`);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -208,9 +208,9 @@ const miles = km => km * 0.621371;
 
 // const miles = km => km * (1 / 1.60934);
 
-const five_km = 5;
-const num_miles = miles(five_km);
-console.log('num_miles: ', num_miles);
+// const five_km = 5;
+// const num_miles = miles(five_km);
+// console.log('num_miles: ', num_miles);
 
 
 //Task 5b - Feet to CM
@@ -223,9 +223,9 @@ Using the feet function below do the following:
 //   x[cm] * (1[ft] / 30.48[cm]) = x[ft]
 // = x[cm] * 0.03280839895013123 [ft/cm]
 
-const cm = 1;
-const feet = cm => cm * 0.03280839895013123;
-console.log('feet: ', feet(cm));
+// const cm = 1;
+// const feet = cm => cm * 0.03280839895013123;
+// console.log('feet: ', feet(cm));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -238,12 +238,11 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-// const annoyingSong = num => {
-//     for (let i = num; i > 0;/* decrement done in the body of the for-loop */)
-//         console.log(`There are ${i}-bottles of soda on the wall, ${i}-bottles of soda, take one down pass it around ${--i}-bottles of soda on the wall`);
-// };
-// const starting_num_of_sodas = 5;
-// annoyingSong(starting_num_of_sodas);
+const annoyingSong = num => {
+  return `${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${--num} bottles of soda on the wall`;
+};
+const starting_num_of_sodas = 5;
+annoyingSong(starting_num_of_sodas);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -292,13 +291,13 @@ function foo(){
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 export default{
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
+    // foo,
+    // multiply,
+    // dogYears,
+    // hungryDog,
     // game,
-    miles,
-    feet,
-    // annoyingSong,
+    // miles,
+    // feet,
+    annoyingSong,
     // grade
 }
