@@ -224,7 +224,7 @@ Using the feet function below do the following:
 // = x[cm] * 0.03280839895013123 [ft/cm]
 
 // const cm = 1;
-// const feet = cm => cm * 0.03280839895013123;
+const feet = cm => cm * 0.03280839895013123;
 // console.log('feet: ', feet(cm));
 
 
@@ -241,8 +241,8 @@ Using the annoyingSong function below do the following:
 const annoyingSong = num => {
   return `${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${--num} bottles of soda on the wall`;
 };
-const starting_num_of_sodas = 5;
-annoyingSong(starting_num_of_sodas);
+// const starting_num_of_sodas = 5;
+// annoyingSong(starting_num_of_sodas);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -259,11 +259,14 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
-  }
-  
-  
+const grade = (num_grade) => {
+    if (90 <= num_grade) return 'you got an A'; // [90, infinity)
+    else if (80 <= num_grade && num_grade < 90) return 'you got a B'; // [80, 90)
+    else if (70 <= num_grade && num_grade < 80) return 'you got a C'; // [70, 80)       
+    else if (60 <= num_grade && num_grade < 70) return 'you got a D'; // [60, 70)
+    else if (num_grade < 60) return 'you got an F'; // (-infity, 60)
+};
+
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
@@ -278,26 +281,42 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
-}
+// function vowelCounter(str) {
+const vowelCounter = str => {
 
+  // /pattern/flags -- Used to specify the parameters of the search pattern.
+  const reg_ex = /[aeiou]/gi;
+  //  g says to find all matches within the string (instead of only the first).
+  //  i flag says to ignore the case of the letters.
+
+  const matches = str.match(reg_ex);
+  console.log('--------');
+  console.log(matches);
+  console.log('--------');
+
+  if (matches != null)    return matches.length;
+  else                    return 0;
+};
+
+const test_word = 'supercalifragilisticexpialidocious';
+const num_vowels = vowelCounter(test_word);
+console.log(`number of vowels in the word ${test_word}: `, num_vowels);
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){
-    //console.log('its working');
+    console.log('its working');
     return 'bar';
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 export default{
-    // foo,
-    // multiply,
-    // dogYears,
-    // hungryDog,
-    // game,
-    // miles,
-    // feet,
+    foo,
+    multiply,
+    dogYears,
+    hungryDog,
+    game,
+    miles,
+    feet,
     annoyingSong,
-    // grade
+    grade
 }
