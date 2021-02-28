@@ -201,10 +201,16 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+// 1km = 0.62137119223mi
+// const miles = km => km * 0.62137;
+const miles = km => km * 0.621371;
+// const miles = km => km * 0.621371192;
 
+// const miles = km => km * (1 / 1.60934);
+
+const five_km = 5;
+const num_miles = miles(five_km);
+console.log('num_miles: ', num_miles);
 
 
 //Task 5b - Feet to CM
@@ -214,10 +220,9 @@ Using the feet function below do the following:
   2. Convert the number of cm to feet
   3. Return number of feet
 */
+const feet = ft => ft * 30.48;
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
+
  
 
 
@@ -231,10 +236,12 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
-
+const annoyingSong = num => {
+    for (let i = num; i > 0;/* decrement done in the body of the for-loop */)
+        console.log(`There are ${i}-bottles of soda on the wall, ${i}-bottles of soda, take one down pass it around ${--i}-bottles of soda on the wall`);
+};
+const starting_num_of_sodas = 5;
+annoyingSong(starting_num_of_sodas);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -287,9 +294,9 @@ export default{
     multiply,
     dogYears,
     hungryDog,
-    game,
+    // game,
     miles,
-    feet,
-    annoyingSong,
-    grade
+    // feet,
+    // annoyingSong,
+    // grade
 }
