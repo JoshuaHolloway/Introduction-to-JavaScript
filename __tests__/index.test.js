@@ -23,32 +23,34 @@ describe('hungryDogFunction', ()=>{
         expect(functions.hungryDog(15, 1)).toBe(0.44999999999999996);
     })
 });
-describe('gameFunction', ()=>{
-    it('return win, lose or tie', ()=>{
-        expect(functions.game('rock', 'scissors')).toBe('you win!');
-    })
-    it('return win, lose or tie', ()=>{
-        expect(functions.game('rock', 'paper')).toBe('you lose!');
-    })
-    it('return win, lose or tie', ()=>{
-        expect(functions.game('rock', 'rock')).toBe(`it's a tie`);
-    })
-    it('return win, lose or tie', ()=>{
-        expect(functions.game('paper', 'rock')).toBe(`you win!`);
-    })
-    it('return win, lose or tie', ()=>{
-        expect(functions.game('paper', 'scissors')).toBe(`you lose!`);
-    })
-    it('return win, lose or tie', ()=>{
-        expect(functions.game('paper', 'paper')).toBe(`it's a tie`);
-    })
-    it('return win, lose or tie', ()=>{
-        expect(functions.game('scissors', 'paper')).toBe(`you win!`);
-    })
-    it('return win, lose or tie', ()=>{
-        expect(functions.game('scissors', 'rock')).toBe(`you lose!`);
-    })
-});
+
+// describe('gameFunction', ()=>{
+//     it('return win, lose or tie', ()=>{
+//         expect(functions.game('rock', 'scissors')).toBe('you win!');
+//     })
+//     it('return win, lose or tie', ()=>{
+//         expect(functions.game('rock', 'paper')).toBe('you lose!');
+//     })
+//     it('return win, lose or tie', ()=>{
+//         expect(functions.game('rock', 'rock')).toBe(`it's a tie`);
+//     })
+//     it('return win, lose or tie', ()=>{
+//         expect(functions.game('paper', 'rock')).toBe(`you win!`);
+//     })
+//     it('return win, lose or tie', ()=>{
+//         expect(functions.game('paper', 'scissors')).toBe(`you lose!`);
+//     })
+//     it('return win, lose or tie', ()=>{
+//         expect(functions.game('paper', 'paper')).toBe(`it's a tie`);
+//     })
+//     it('return win, lose or tie', ()=>{
+//         expect(functions.game('scissors', 'paper')).toBe(`you win!`);
+//     })
+//     it('return win, lose or tie', ()=>{
+//         expect(functions.game('scissors', 'rock')).toBe(`you lose!`);
+//     })
+// });
+
 describe('milesFunction', ()=>{
     it('return km * 0.621371', ()=>{
         expect(functions.miles(10)).toBe(6.21371);
@@ -60,11 +62,13 @@ describe('feetFunction', ()=>{
         expect(functions.feet(160)).toBe(5.2493438320209975);
     })
 });
+
 describe('annoyingSongFunction', ()=>{
     it('a string that counts down based on the number imputted', ()=>{
         expect(functions.annoyingSong(5)).toBe(`${5} bottles of soda on the wall, ${5} bottles of soda, take one down pass it around ${5 - 1} bottles of soda on the wall`);
     })
 });
+
 describe('gradeFunction', ()=>{
     it('expect A', ()=>{
         expect(functions.grade(90)).toBe('you got an A');
@@ -82,5 +86,3 @@ describe('gradeFunction', ()=>{
         expect(functions.grade(59)).toBe('you got an F');
     })
 });
-
-

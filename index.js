@@ -17,7 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 18;
+const age = 37;
+if (age > votingAge)
+  console.log('true');
 
 
 /*
@@ -30,7 +33,15 @@ Do the following:
 
    HINT: no function required
 */
+// declare a variable
+let variable = 5;
 
+// use a conditional to change the value of that variable based on the value assigned to a second variable
+const second_variable = 4.999999;
+if (variable < second_variable)
+    variable = 1e3;
+
+console.log(`variable = ${variable}`);
 
 
 
@@ -45,6 +56,10 @@ Do the following:
 
    HINT: look up the Number method
 */
+const str2num = str => Number(str);
+const x = str2num('1999');
+console.log(x);
+console.log(typeof x);
 
 
 
@@ -58,9 +73,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+const multiply = (a, b) => a * b;
+// function multiply(/*add your code here*/){
+//   /*add your code here*/
+// }
 
 
 
@@ -74,9 +90,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
-}
+const human2dogYear_conversionFactor = 7;
+const dogYears = human_age => human_age * human2dogYear_conversionFactor;
 
 
 
@@ -107,11 +122,46 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
+const hungryDog = (weight, age) => {
+    let pounds_of_food;
+    if (age >= 1) { // adult dogs at least 1 year 
+        if (weight <= 5) // up to 5 lbs - 5% of their body weight
+            pounds_of_food = 0.05 * weight;
+        else if (6 <= weight && weight <= 10) // 6 - 10 lbs - 4% of their body weight 
+            pounds_of_food = 0.04 * weight;
+        else if (11 <= weight && weight <= 15) // 11 - 15 lbs - 3% of their body weight 
+            pounds_of_food = 0.03 * weight;
+        else if (weight > 15)// > 15lbs - 2% of their body weight
+            pounds_of_food = 0.02 * weight;
+        // else
+        //     return "We don't know!";
+    } else { // Puppies less than 1 year
+
+        // Convert months to factions of a year
+        const months2years = months => months / 12.0;
+        // Ex: 2-months * (year / 12-months) = (2/12)-years = (1/6)-year = 0.1667-years
+
+        console.log(`2-months = ${months2years(2)}`);
+        console.log(`4-months = ${months2years(4)}`);
+        console.log(`7-months = ${months2years(7)}`);
+
+        if (months2years(2) <= age && age < months2years(4)) // [2, 4)-months
+            pounds_of_food = 0.1 * weight; // 2 - 4 months 10% of their body weight
+        if (months2years(4) <= age && age <= months2years(4)) // [4, 7)-months
+            pounds_of_food = 0.05 * weight;// 4 - 7 months 5% of their body weight 
+        if (months2years(4) <= age && age < 1) // [7, 12)-months
+            pounds_of_food = 0.04 * weight; // 7 - 12 months 4% of their body weight
+    }
+    // return pounds_of_food.toFixed(2); // round to nearest tenth of a pound
+    return pounds_of_food;
+};
 
 
+// NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
+const weight = 15;
+const dog_age = 1;
+const food_to_eat = hungryDog(weight, dog_age);
+// console.log(`Ammount of food to eat is ${food_to_eat}-lbs of food!`);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -151,10 +201,16 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+// 1km = 0.62137119223mi
+// const miles = km => km * 0.62137;
+const miles = km => km * 0.621371;
+// const miles = km => km * 0.621371192;
 
+// const miles = km => km * (1 / 1.60934);
+
+// const five_km = 5;
+// const num_miles = miles(five_km);
+// console.log('num_miles: ', num_miles);
 
 
 //Task 5b - Feet to CM
@@ -164,11 +220,12 @@ Using the feet function below do the following:
   2. Convert the number of cm to feet
   3. Return number of feet
 */
+//   x[cm] * (1[ft] / 30.48[cm]) = x[ft]
+// = x[cm] * 0.03280839895013123 [ft/cm]
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
- 
+// const cm = 1;
+const feet = cm => cm * 0.03280839895013123;
+// console.log('feet: ', feet(cm));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -181,10 +238,11 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
-
+const annoyingSong = num => {
+  return `${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${--num} bottles of soda on the wall`;
+};
+// const starting_num_of_sodas = 5;
+// annoyingSong(starting_num_of_sodas);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -201,11 +259,14 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
-  }
-  
-  
+const grade = (num_grade) => {
+    if (90 <= num_grade) return 'you got an A'; // [90, infinity)
+    else if (80 <= num_grade && num_grade < 90) return 'you got a B'; // [80, 90)
+    else if (70 <= num_grade && num_grade < 80) return 'you got a C'; // [70, 80)       
+    else if (60 <= num_grade && num_grade < 70) return 'you got a D'; // [60, 70)
+    else if (num_grade < 60) return 'you got an F'; // (-infity, 60)
+};
+
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
@@ -220,15 +281,31 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
-}
+// function vowelCounter(str) {
+const vowelCounter = str => {
 
+  // /pattern/flags -- Used to specify the parameters of the search pattern.
+  const reg_ex = /[aeiou]/gi;
+  //  g says to find all matches within the string (instead of only the first).
+  //  i flag says to ignore the case of the letters.
+
+  const matches = str.match(reg_ex);
+  console.log('--------');
+  console.log(matches);
+  console.log('--------');
+
+  if (matches != null)    return matches.length;
+  else                    return 0;
+};
+
+const test_word = 'supercalifragilisticexpialidocious';
+const num_vowels = vowelCounter(test_word);
+console.log(`number of vowels in the word ${test_word}: `, num_vowels);
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){
-    //console.log('its working');
+    console.log('its working');
     return 'bar';
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
