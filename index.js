@@ -17,7 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 18;
+const age = 37;
+if (age > votingAge)
+  console.log('true');
 
 
 /*
@@ -30,7 +33,15 @@ Do the following:
 
    HINT: no function required
 */
+// declare a variable
+let variable = 5;
 
+// use a conditional to change the value of that variable based on the value assigned to a second variable
+const second_variable = 4.999999;
+if (variable < second_variable)
+    variable = 1e3;
+
+console.log(`variable = ${variable}`);
 
 
 
@@ -45,6 +56,10 @@ Do the following:
 
    HINT: look up the Number method
 */
+const str2num = str => Number(str);
+const x = str2num('1999');
+console.log(x);
+console.log(typeof x);
 
 
 
@@ -58,9 +73,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+const multiply = (a, b) => a * b;
+// function multiply(/*add your code here*/){
+//   /*add your code here*/
+// }
 
 
 
@@ -74,9 +90,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
-}
+const human2dogYear_conversionFactor = 7;
+const dogYears = human_age => human_age * human2dogYear_conversionFactor;
 
 
 
@@ -107,11 +122,46 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
+const hungryDog = (weight, age) => {
+    let pounds_of_food;
+    if (age >= 1) { // adult dogs at least 1 year 
+        if (weight <= 5) // up to 5 lbs - 5% of their body weight
+            pounds_of_food = 0.05 * weight;
+        else if (6 <= weight && weight <= 10) // 6 - 10 lbs - 4% of their body weight 
+            pounds_of_food = 0.04 * weight;
+        else if (11 <= weight && weight <= 15) // 11 - 15 lbs - 3% of their body weight 
+            pounds_of_food = 0.03 * weight;
+        else if (weight > 15)// > 15lbs - 2% of their body weight
+            pounds_of_food = 0.02 * weight;
+        // else
+        //     return "We don't know!";
+    } else { // Puppies less than 1 year
+
+        // Convert months to factions of a year
+        const months2years = months => months / 12.0;
+        // Ex: 2-months * (year / 12-months) = (2/12)-years = (1/6)-year = 0.1667-years
+
+        console.log(`2-months = ${months2years(2)}`);
+        console.log(`4-months = ${months2years(4)}`);
+        console.log(`7-months = ${months2years(7)}`);
+
+        if (months2years(2) <= age && age < months2years(4)) // [2, 4)-months
+            pounds_of_food = 0.1 * weight; // 2 - 4 months 10% of their body weight
+        if (months2years(4) <= age && age <= months2years(4)) // [4, 7)-months
+            pounds_of_food = 0.05 * weight;// 4 - 7 months 5% of their body weight 
+        if (months2years(4) <= age && age < 1) // [7, 12)-months
+            pounds_of_food = 0.04 * weight; // 7 - 12 months 4% of their body weight
+    }
+    // return pounds_of_food.toFixed(2); // round to nearest tenth of a pound
+    return pounds_of_food;
+};
 
 
+// NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
+const weight = 15;
+const dog_age = 1;
+const food_to_eat = hungryDog(weight, dog_age);
+console.log(`Ammount of food to eat is ${food_to_eat}-lbs of food!`);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
