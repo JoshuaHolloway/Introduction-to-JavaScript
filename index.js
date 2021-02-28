@@ -220,10 +220,12 @@ Using the feet function below do the following:
   2. Convert the number of cm to feet
   3. Return number of feet
 */
-const feet = ft => ft * 30.48;
+//   x[cm] * (1[ft] / 30.48[cm]) = x[ft]
+// = x[cm] * 0.03280839895013123 [ft/cm]
 
-
- 
+const cm = 1;
+const feet = cm => cm * 0.03280839895013123;
+console.log('feet: ', feet(cm));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -236,12 +238,12 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-const annoyingSong = num => {
-    for (let i = num; i > 0;/* decrement done in the body of the for-loop */)
-        console.log(`There are ${i}-bottles of soda on the wall, ${i}-bottles of soda, take one down pass it around ${--i}-bottles of soda on the wall`);
-};
-const starting_num_of_sodas = 5;
-annoyingSong(starting_num_of_sodas);
+// const annoyingSong = num => {
+//     for (let i = num; i > 0;/* decrement done in the body of the for-loop */)
+//         console.log(`There are ${i}-bottles of soda on the wall, ${i}-bottles of soda, take one down pass it around ${--i}-bottles of soda on the wall`);
+// };
+// const starting_num_of_sodas = 5;
+// annoyingSong(starting_num_of_sodas);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -296,7 +298,7 @@ export default{
     hungryDog,
     // game,
     miles,
-    // feet,
+    feet,
     // annoyingSong,
     // grade
 }
