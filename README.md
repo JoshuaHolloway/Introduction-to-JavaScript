@@ -1,69 +1,50 @@
-# (Josh)
-* Pull Request URL
-    * https://github.com/JoshuaHolloway/Introduction-to-JavaScript/pull/1
+## Advanced CSS and Intro to JavaScript
 
-# Introduction To JavaScript
-
-The module challenge is the afternoon project or assignment that students work through independently. This expands on the guided project completed earlier with the instructor.
-
-## Advanced CSS and JavaScript
-
-## JavaScript Foundations
+## Arrays
 
 ## Objectives
 
-- use let, const, var and demonstrate their differences.
-- understand and be able to use different operators.
-- write a basic for loop / while loop.
-- write control flow using if/else statements.
-- use function declarations, expressions, and arrow
-functions and describe their differences
-  
+- use arrays to store and access data
+- use array properties and array methods
+
 ## Introduction
 
-Today you'll worth through 7 JavaScript Tasks to practice today's objectives and get familiar and comfortable with the foundations of JavaScript. 
+Baskin Robins, a global chain of ice cream parlors, first opened in 1945 and served 31 flavors of Ice Cream. They have grown to almost 6,000 franchises world wide and have now became famous for serving exactly 31 flavors at a time. Since they first opened, they no longer serve the same 31 flavors, but they do always have exactly 31 ice cream flavors available.
 
-Exercises are outlined in the `index.js` file, please read the instructions carefully for each task and complete it. Note that you may have to use your googling skills to research and look things up if you do not have all the information you need to complete the task.
-
+Your challenge today will be to work with their array of ice cream flavors to access, remove, and add flavors, all while ensuring the length never exceeds 31.
 
 ## Instructions
 
 ### Task 1: Set up Project
 
-Using VSCode and Command Line:
+1. Fork the repo
+2. Clone your forked version of the repo
+3. cd into your repo and create a branch with your first and last name
+4. open the terminal in your vs code and type `npm install`
+5. next type `npm run test:watch` in your terminal
+6. Complete your work making regular commits, once you have all your tests passing and you are ready to submit your work please see canvas for instructions on how to submit
 
-1. Fork repo and add TL as collaborator on Github.
-2. Clone your fork (not Lambda's repo by mistake!).
-3. `cd` into your newly cloned repository.
-4. Create a new branch by typing `git checkout -b <firstName-lastName>`.
+### Task 2: MVP
 
-### Task 2: Complete MVP Requirements
+Find the file `index.js` and complete the tasks until your returns look like the expected returns. Do not use any of the forbidden methods!
 
-Find the `index.js` file and complete the tasks as written. 
+### Task 3: Stretch
 
-As you work on your code you should make use of `console.log` to check your progress and debug.
+There are several stretch goals inside `index.js`. You may work on these once you have finished MVP requirements for the day!
 
-### Task 2b: Exit Ticket
+## FAQs
 
-Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/pi7Q49mgrZbodiRzM/aXzit9h4ZRp3Si)
+**Why aren't my results showing up in the console?**
 
-The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
-
-### Task 3: Stretch Goals
-
-After you have completed the requirements, try any of the following challenges. As always, note that these may require additional research beyond what you learned in this module.
-
-- [ ] See tasks labelled stretch. Please ensure you've completed MVP before you attempt the stretch goals. Note that you may need to look forward to tomorrow's training kit in order to complete the task. 
-
-## Submission format
-
-Follow these steps for completing your project.
-
-1. [ ] Submit a pull request to merge `<firstName-lastName>` branch into master. **Please don't merge your own pull request**
-2. [ ] Add your TL as a reviewer on the pull-request
-3. [ ] Your TL will count the project as complete by merging the branch back into master
+Make sure you are invoking your function after defining and wrapping a console.log around the invocation in order to view results in the console.
 
 ## Resources
 
-🧮 [Polya's 4 Step Approach to Problem Solving](http://web.mnstate.edu/peil/M110/Worksheet/PolyaProblemSolve.pdf)
+🤝[W3 Schools - JavaScript Arrays](https://www.w3schools.com/js/js_arrays.asp)
+
+🍦[Baskin Robins Flavors](https://simple.wikipedia.org/wiki/Baskin-Robbins)
+
+## Submission format
+
+Please see canvas for cohort specific submission instructions
 
